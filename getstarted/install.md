@@ -31,6 +31,16 @@ libraryDependencies += "co.fs2" %%% "fs2-io" % "3.1.3"
 scalaJSLinkerConfig ~= (_.withModuleKind(ModuleKind.CommonJSModule)) 
 ```
 
+The fs2-core as well as fs2-io and fs2-scodec libraries are also supported on Scala Native:
+```
+libraryDependencies += "co.fs2" %%% "fs2-core" % "3.1.3"
+libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.1.3"
+
+// TCP support requires https://github.com/armanbilge/epollcat/
+// TLS support requires https://github.com/aws/s2n-tls
+libraryDependencies += "co.fs2" %%% "fs2-io" % "3.1.3"
+```
+
 Release notes for each release are available on [Github](https://github.com/typelevel/fs2/releases/).
 
 If upgrading from the 2.x series, see the [release notes for 3.0.0](https://github.com/typelevel/fs2/releases/tag/v3.0.0) for help with upgrading.
